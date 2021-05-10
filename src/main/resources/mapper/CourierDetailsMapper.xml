@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.QQLY.mapper.CourierDetailsMapper" >
+  <resultMap id="BaseResultMap" type="com.QQLY.pojo.CourierDetails" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="num" property="num" jdbcType="VARCHAR" />
+    <result column="value" property="value" jdbcType="VARCHAR" />
+    <result column="time1" property="time1" jdbcType="DATE" />
+    <result column="time2" property="time2" jdbcType="DATE" />
+  </resultMap>
+</mapper>

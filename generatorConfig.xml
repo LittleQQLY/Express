@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!--mybatis逆向生成-->
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.QQLY.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/express"
+                        userId="root"
+                        password="123456789">
+        </jdbcConnection>
+
+        <!-- 对于生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.QQLY.pojo" targetProject="src/main/java"/>
+
+		<!-- 对于生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+		<!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.QQLY.mapper" targetProject="src/main/java" type="XMLMAPPER"/>
+
+
+		<table tableName="address"></table>
+        <table tableName="box_stutas"></table>
+        <table tableName="courier_details"></table>
+        <table tableName="courier_list"></table>
+        <table tableName="friend_request"></table>
+        <table tableName="friends"></table>
+        <table tableName="history_send_order"></table>
+        <table tableName="send_order"></table>
+        <table tableName="users"></table>
+    </context>
+</generatorConfiguration>
